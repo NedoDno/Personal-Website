@@ -1,11 +1,11 @@
 {
   "name": "fwd",
   "version": "1.0.0",
-  "main": "hw3.ts",
+  "main": "./src/hw3.ts",
   "type": "module",
   "scripts": {
-    "build": "rollup -c",
-    "browser_build": "npm run build && browserify bundle.js -o bundle.js"
+    "pre_build": "rollup -c",
+    "build": "npm run pre_build && browserify ./dist/bundle.js -o ./dist/bundle.js"
   },
   "author": "",
   "license": "ISC",
