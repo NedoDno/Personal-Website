@@ -5,6 +5,6 @@
     "allowSyntheticDefaultImports": true,
     "outDir": "lib",
     "strict": true,
-    "rootDir": "./"
+    "rootDir": "./src"
   }
 }
