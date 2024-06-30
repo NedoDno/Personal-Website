@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution":"node",
+    "allowSyntheticDefaultImports": true,
+    "outDir": "lib",
+    "strict": true,
+    "rootDir": "./"
+  }
+}
