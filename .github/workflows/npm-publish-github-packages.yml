@@ -27,8 +27,10 @@ jobs:
         with:
           node-version: 20
       - run: git config --global user.email "$EMAIL"
+      - run: git config --global user.name "$NAME"
       - run: npm install 
       - run: npm run build
       - run: npm run deploy
         env:
             EMAIL: ${{secrets.EMAIL}}
+            EMAIL: ${{secrets.NAME}}
