@@ -27,10 +27,7 @@ jobs:
         with:
           node-version: 20
       - run: git config --global user.name "NedoDno"
-      - run: git config --global user.email "$EMAIL"
+      - run: git config --global user.email "irlim@yandex.ru"
       - run: npm install 
       - run: npm run build
       - run: npm run deploy
-        env:
-            EMAIL: ${{secrets.EMAIL}}
-            NAME: ${{secrets.NAME}}
