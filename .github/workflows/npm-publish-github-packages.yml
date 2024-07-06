@@ -33,4 +33,4 @@ jobs:
       - run: npm run deploy
         env:
             EMAIL: ${{secrets.EMAIL}}
-            EMAIL: ${{secrets.NAME}}
+            NAME: ${{secrets.NAME}}
