@@ -26,7 +26,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: git remote add origin https://${USERNAME}:${PASSWORD}@github.com/${USERNAME}/Personal-Website.git
+      - run: git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/${USERNAME}/Personal-Website.git
       - run: npm install 
       - run: npm run build
       - run: npm run deploy
