@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+    import { base } from '$app/paths';
 </script>
 
 <header>
@@ -7,10 +8,10 @@
         <p>2nd year student at Innopolis University</p>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+				<a href="{base}/">Home</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/comic' ? 'page' : undefined}>
-				<a href="/comic">Comic from lab 2</a>
+				<a href="{base}/comic">Comic from lab 2</a>
 			</li>
 		</ul>
 </header>
