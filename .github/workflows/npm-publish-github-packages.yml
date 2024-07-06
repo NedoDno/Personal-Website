@@ -26,12 +26,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
+      - run: echo $USERNAME
       - run: git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/${USERNAME}/Personal-Website.git
       - run: npm install 
       - run: npm run build
       - run: npm run deploy
-        with:
-          config-path: .github/labeler.yml
-        secrets:
+        env:
           USERNAME: ${{secrets.USERNAME}}
           PASSWORD: ${{secrets.PASSWORD}}
