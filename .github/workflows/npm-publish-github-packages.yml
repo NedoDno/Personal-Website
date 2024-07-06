@@ -29,10 +29,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: git remote set-url origin https://${USERNAME}:${PASSWORD}@github.com/${USERNAME}/Personal-Website.git
+      - run: git remote set-url origin https://${{ secrets.USERNAME }}:${{ secrets.PASSWORD }}@github.com/${{ secrets.USERNAME }}/Personal-Website.git
       - run: npm install 
       - run: npm run build
       - run: npm run deploy
-        with:
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
