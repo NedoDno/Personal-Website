@@ -22,6 +22,11 @@ jobs:
     needs: lint
     runs-on: ubuntu-latest
     steps:
+      with:
+        config-path: .github/labeler.yml
+      secrets:
+        USERNAME: ${{secrets.USERNAME}}
+        PASSWORD: ${{secrets.PASSWORD}}
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
@@ -30,6 +35,3 @@ jobs:
       - run: npm install 
       - run: npm run build
       - run: npm run deploy
-        env:
-            USERNAME: ${{secrets.USERNAME}}
-            PASSWORD: ${{secrets.PASSWORD}}
