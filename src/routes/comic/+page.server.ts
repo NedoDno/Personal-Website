@@ -13,6 +13,7 @@ interface SSRComicResponse {
   imgPostedFromNow: string;
 }
 
+
 interface ComicResponse {
   img: string;
   transcript: string;
