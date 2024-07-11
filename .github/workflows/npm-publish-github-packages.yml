@@ -5,7 +5,7 @@ name: Node.js Package
 
 on:
   push:
-    branches: 
+    branches:
       - hw5
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: npm install 
+      - run: npm install
       - run: npm run lint
   build-deploy:
     needs: lint
@@ -29,6 +29,6 @@ jobs:
       - run: git remote set-url origin https://${{secrets.PAT}}@github.com/${{secrets.USERNAME}}/Personal-Website.git
       - run: git config --global user.email "${{secrets.EMAIL}}"
       - run: git config --global user.name "${{secrets.NAME}}"
-      - run: npm install 
+      - run: npm install
       - run: npm run build
       - run: npm run deploy
