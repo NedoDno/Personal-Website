@@ -7,8 +7,10 @@
 
 <svelte:head>
 	<title>Comic </title>
+	<meta name="author" content="I don't know who is an autor of the comic" />
 	<meta name="Comic" content="Comic from the lab 2" />
 </svelte:head>
+
 
 <div>
   <Comic comicInfo={data.comicInfo}/>  

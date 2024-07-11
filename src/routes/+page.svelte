@@ -3,8 +3,9 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Bio</title>
+	<meta name="description" content="Information about main person in this website" />
+	<meta name="author" content="Margarita Ginzburg" />
 </svelte:head>
 
 <section>

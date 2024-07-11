@@ -4,6 +4,9 @@
 	import '../app.css';
 </script>
 
+<svelte:head>
+	<meta name="author" content="Margarita Ginzburg" />
+</svelte:head>
 <div class="app">
 	<Header />
 
